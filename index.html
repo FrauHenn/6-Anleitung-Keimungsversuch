@@ -7,6 +7,11 @@
 <title>Projektübersicht – Keimungsversuch</title>
 
 <style>
+
+/* =========================
+   GRUNDEINSTELLUNGEN
+   ========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -19,15 +24,16 @@ body {
   line-height: 1.55;
 }
 
-/* ---------- GESAMTBEREICH ---------- */
-
 .wrapper {
   max-width: 1050px;
   margin: 0 auto;
   padding: 22px;
 }
 
-/* ---------- KOPFBEREICH ---------- */
+
+/* =========================
+   KOPFBEREICH
+   ========================= */
 
 .hero {
   background: linear-gradient(135deg, #426b4e, #71956d);
@@ -57,7 +63,10 @@ body {
   font-size: 18px;
 }
 
-/* ---------- AUFTRAG ---------- */
+
+/* =========================
+   PROJEKTAUFTRAG
+   ========================= */
 
 .mission {
   background: white;
@@ -72,7 +81,10 @@ body {
   color: #426b4e;
 }
 
-/* ---------- INFO-KARTEN ---------- */
+
+/* =========================
+   SCHNELLÜBERSICHT
+   ========================= */
 
 .quickinfo {
   display: grid;
@@ -104,7 +116,10 @@ body {
   font-size: 14px;
 }
 
-/* ---------- AUFKLAPPBEREICHE ---------- */
+
+/* =========================
+   AUFKLAPPBEREICHE
+   ========================= */
 
 details {
   background: white;
@@ -146,18 +161,22 @@ details[open] summary::after {
   padding: 0 25px 25px;
 }
 
-/* ---------- ARBEITSSCHRITTE ---------- */
+
+/* =========================
+   ARBEITSSCHRITTE
+   ========================= */
 
 .step {
   display: flex;
   gap: 15px;
-  margin: 17px 0;
+  margin: 19px 0;
   align-items: flex-start;
 }
 
 .number {
-  min-width: 35px;
-  height: 35px;
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #e3eee2;
   color: #426b4e;
@@ -171,7 +190,44 @@ details[open] summary::after {
   color: #355d42;
 }
 
-/* ---------- ZEITPLAN ---------- */
+
+/* =========================
+   SELBSTLERNKURS
+   ========================= */
+
+.course-box {
+  background: #f0f6ee;
+  border: 1px solid #d7e5d4;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-top: 12px;
+}
+
+.course-box p {
+  margin-top: 0;
+}
+
+.course-button {
+  display: inline-block;
+  background: #426b4e;
+  color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 11px 17px;
+  border-radius: 10px;
+  margin-top: 4px;
+  transition: 0.2s;
+}
+
+.course-button:hover {
+  background: #355d42;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   ZEITPLAN
+   ========================= */
 
 .lesson {
   display: grid;
@@ -200,13 +256,16 @@ details[open] summary::after {
   margin-top: 7px;
 }
 
-/* ---------- BEWERTUNG ---------- */
+
+/* =========================
+   BEWERTUNG
+   ========================= */
 
 .criteria {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 
 .badge {
@@ -216,7 +275,10 @@ details[open] summary::after {
   font-size: 14px;
 }
 
-/* ---------- KRANKHEIT ---------- */
+
+/* =========================
+   KRANKHEIT
+   ========================= */
 
 .notice {
   background: #fff8e8;
@@ -226,7 +288,10 @@ details[open] summary::after {
   margin-top: 12px;
 }
 
-/* ---------- MOBILE / IPAD ---------- */
+
+/* =========================
+   IPAD / TABLET
+   ========================= */
 
 @media (max-width: 800px) {
 
@@ -252,6 +317,11 @@ details[open] summary::after {
   }
 }
 
+
+/* =========================
+   SMARTPHONE
+   ========================= */
+
 @media (max-width: 480px) {
 
   .quickinfo {
@@ -261,222 +331,511 @@ details[open] summary::after {
   .hero h1 {
     font-size: 27px;
   }
+
+  .content {
+    padding: 0 18px 20px;
+  }
+
+  summary {
+    padding: 18px;
+  }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="wrapper">
 
-  <!-- KOPFBEREICH -->
 
-  <div class="hero">
+<!-- =========================
+     KOPFBEREICH
+     ========================= -->
 
-    <div class="hero-small">
-      Biologie · Projektarbeit
-    </div>
+<div class="hero">
 
-    <h1>🌱 Keimungsprojekt</h1>
-
-    <p>
-      Wir untersuchen, was Samen zum Keimen brauchen.
-    </p>
-
+  <div class="hero-small">
+    Biologie · Projektarbeit
   </div>
 
-
-  <!-- AUFTRAG -->
-
-  <div class="mission">
-
-    <strong>Eure Aufgabe:</strong><br>
-
-    Ihr überprüft eine Hypothese mithilfe eines Keimungsversuchs
-    und wertet eure Ergebnisse nach dem
-    <strong>naturwissenschaftlichen Erkenntnisweg</strong> aus.
-
-  </div>
-
-
-  <!-- SCHNELLÜBERSICHT -->
-
-  <div class="quickinfo">
-
-    <div class="info">
-      <div class="icon">👥</div>
-      <div class="info-title">Arbeitsform</div>
-      <div class="info-text">
-        Zweiergruppe<br>
-        <small>in Ausnahmefällen zu dritt</small>
-      </div>
-    </div>
-
-    <div class="info">
-      <div class="icon">⏱️</div>
-      <div class="info-title">Projektzeit</div>
-      <div class="info-text">
-        4 Biologiestunden
-      </div>
-    </div>
-
-    <div class="info">
-      <div class="icon">📁</div>
-      <div class="info-title">Dein Produkt</div>
-      <div class="info-text">
-        Projektmappe
-      </div>
-    </div>
-
-    <div class="info">
-  <div class="icon">⭐</div>
-  <div class="info-title">Bewertung</div>
-  <div class="info-text">
-    praktische Leistung<br>
-    <small>im Fach Biologie</small>
-  </div>
-</div>
-
-  </div>
-
-
-  <!-- ARBEITSWEISE -->
-
-  <details open>
-
-    <summary>🔬 So arbeitet ihr</summary>
-
-    <div class="content">
-
-      <div class="step">
-
-        <div class="number">1</div>
-
-        <div>
-          <strong>Hypothese erhalten</strong><br>
-          Jede Gruppe erhält eine Hypothese, die sie mit einem
-          Keimungsversuch überprüfen soll.
-        </div>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="number">2</div>
-
-        <div>
-          <strong>Versuch durchführen</strong><br>
-          Der Versuch ist vorgegeben. Ihr führt ihn sorgfältig durch,
-          beobachtet genau und erhebt gemeinsam eure Daten.
-        </div>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="number">3</div>
-
-        <div>
-          <strong>Ergebnisse auswerten</strong><br>
-          Die Versuchsdaten erhebt ihr gemeinsam.
-          <strong>Das Diagramm erstellt jeder selbstständig.</strong>
-        </div>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="number">4</div>
-
-        <div>
-          <strong>Projektmappe fertigstellen</strong><br>
-          Einige Aufgaben bearbeitet ihr gemeinsam, andere jeder für sich.
-          Achtet deshalb auf die Hinweise in der Projektmappe.
-        </div>
-
-      </div>
-
-    </div>
-
-  </details>
-
-
-  <!-- ZEITPLAN -->
-
-  <details>
-
-    <summary>🗓️ Zeitplan</summary>
-
-    <div class="content">
-
-      <div class="lesson">
-        <div class="lesson-number">1. Stunde</div>
-        <div>
-          <strong>Projektstart</strong><br>
-          Projekt kennenlernen · Gruppen bilden · Thema erhalten ·
-          Projektmappe und Bewertungskriterien besprechen
-        </div>
-      </div>
-
-
-      <div class="lesson">
-        <div class="lesson-number">2. Stunde</div>
-        <div>
-          <strong>Versuch starten</strong><br>
-          Versuch ansetzen und Beobachtungen dokumentieren
-        </div>
-      </div>
-
-
-      <div class="lesson">
-        <div class="lesson-number">3. Stunde</div>
-        <div>
-          <strong>Beobachten & auswerten</strong><br>
-          Versuch fortführen · Daten erfassen · Auswertung beginnen
-        </div>
-      </div>
-
-
-      <div class="lesson">
-        <div class="lesson-number">4. Stunde</div>
-        <div>
-          <strong>Ergebnisse sichern</strong><br>
-          Versuch auswerten und Projektmappe fertigstellen
-          <br>
-          <span class="abgabe">Abgabe der Projektmappe</span>
-        </div>
-      </div>
-
-    </div>
-
-  </details>
-
-
-  <!-- BEWERTUNG -->
-
-  <details>
-
-    <summary>⭐ Bewertung</summary>
-
-    <div class="content">
+  <h1>🌱 Keimungsprojekt</h1>
 
   <p>
-    Deine <strong>Projektmappe wird als praktische Leistung 
+    Wir untersuchen, was Samen zum Keimen brauchen.
+  </p>
+
+</div>
+
+
+
+<!-- =========================
+     PROJEKTAUFTRAG
+     ========================= -->
+
+<div class="mission">
+
+  <strong>Eure Aufgabe:</strong><br>
+
+  Ihr überprüft eine Hypothese mithilfe eines Keimungsversuchs
+  und wertet eure Ergebnisse nach dem
+  <strong>naturwissenschaftlichen Erkenntnisweg</strong> aus.
+
+</div>
+
+
+
+<!-- =========================
+     SCHNELLÜBERSICHT
+     ========================= -->
+
+<div class="quickinfo">
+
+  <div class="info">
+
+    <div class="icon">👥</div>
+
+    <div class="info-title">
+      Arbeitsform
+    </div>
+
+    <div class="info-text">
+      Zweiergruppe<br>
+      <small>in Ausnahmefällen zu dritt</small>
+    </div>
+
+  </div>
+
+
+  <div class="info">
+
+    <div class="icon">⏱️</div>
+
+    <div class="info-title">
+      Projektzeit
+    </div>
+
+    <div class="info-text">
+      4 Biologiestunden
+    </div>
+
+  </div>
+
+
+  <div class="info">
+
+    <div class="icon">📁</div>
+
+    <div class="info-title">
+      Dein Produkt
+    </div>
+
+    <div class="info-text">
+      Projektmappe
+    </div>
+
+  </div>
+
+
+  <div class="info">
+
+    <div class="icon">⭐</div>
+
+    <div class="info-title">
+      Bewertung
+    </div>
+
+    <div class="info-text">
+      praktische Leistung<br>
+      <small>im Fach Biologie</small>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     SO ARBEITET IHR
+     ========================= -->
+
+<details open>
+
+<summary>🔬 So arbeitet ihr</summary>
+
+<div class="content">
+
+
+  <!-- SCHRITT 1 -->
+
+  <div class="step">
+
+    <div class="number">1</div>
+
+    <div>
+
+      <strong>Hypothese erhalten</strong><br>
+
+      Jede Gruppe erhält eine Hypothese, die sie mit einem
+      Keimungsversuch überprüfen soll.
+
+    </div>
+
+  </div>
+
+
+
+  <!-- SCHRITT 2 -->
+
+  <div class="step">
+
+    <div class="number">2</div>
+
+    <div>
+
+      <strong>Versuch durchführen</strong><br>
+
+      Der Versuch ist vorgegeben. Ihr führt ihn sorgfältig durch,
+      beobachtet genau und erhebt gemeinsam eure Daten.
+
+    </div>
+
+  </div>
+
+
+
+  <!-- SCHRITT 3: SELBSTLERNKURS -->
+
+  <div class="step">
+
+    <div class="number">3</div>
+
+    <div>
+
+      <strong>Diagramm-Training absolvieren</strong><br>
+
+      Bevor du dein eigenes Diagramm erstellst, bearbeitest du
+      den Selbstlernkurs zum Erstellen von Diagrammen.
+
+      <div class="course-box">
+
+        <p>
+          <strong>📊 Fit fürs Diagramm?</strong><br>
+          Im Selbstlernkurs wiederholst du, wie ein gutes
+          naturwissenschaftliches Diagramm aufgebaut wird.
+        </p>
+
+        <a
+          href="https://lernplattform.bycs.de/course/view.php?id=2543095&amp;section=0#tabs-tree-start"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="course-button">
+
+          📊 Selbstlernkurs „Diagramme“ öffnen
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- SCHRITT 4 -->
+
+  <div class="step">
+
+    <div class="number">4</div>
+
+    <div>
+
+      <strong>Ergebnisse auswerten</strong><br>
+
+      Die Versuchsdaten erhebt ihr gemeinsam.
+      <strong>Das Diagramm erstellt jeder selbstständig.</strong>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+     SO ARBEITET IHR
+     ========================= -->
+
+<details open>
+
+<summary>🔬 So arbeitet ihr</summary>
+
+<div class="content">
+
+
+  <!-- SCHRITT 1: SELBSTLERNKURS -->
+
+  <div class="step">
+
+    <div class="number">1</div>
+
+    <div>
+
+      <strong>Diagramm-Training absolvieren</strong><br>
+
+      Bevor das Keimungsprojekt startet, bearbeitest du den
+      Selbstlernkurs zum Erstellen von Diagrammen.
+
+      <div class="course-box">
+
+        <p>
+          <strong>📊 Fit fürs Diagramm?</strong><br>
+          Im Selbstlernkurs wiederholst du, wie ein gutes
+          naturwissenschaftliches Diagramm aufgebaut wird.
+          Dieses Wissen brauchst du später für die Auswertung
+          deines Keimungsversuchs.
+        </p>
+
+        <a
+          href="https://lernplattform.bycs.de/course/view.php?id=2543095&amp;section=0#tabs-tree-start"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="course-button">
+
+          📊 Selbstlernkurs „Diagramme“ starten
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SCHRITT 2 -->
+
+  <div class="step">
+
+    <div class="number">2</div>
+
+    <div>
+
+      <strong>Hypothese erhalten</strong><br>
+
+      Jede Gruppe erhält eine Hypothese, die sie mit einem
+      Keimungsversuch überprüfen soll.
+
+    </div>
+
+  </div>
+
+
+  <!-- SCHRITT 3 -->
+
+  <div class="step">
+
+    <div class="number">3</div>
+
+    <div>
+
+      <strong>Versuch durchführen</strong><br>
+
+      Der Versuch ist vorgegeben. Ihr führt ihn sorgfältig durch,
+      beobachtet genau und erhebt gemeinsam eure Daten.
+
+    </div>
+
+  </div>
+
+
+  <!-- SCHRITT 4 -->
+
+  <div class="step">
+
+    <div class="number">4</div>
+
+    <div>
+
+      <strong>Ergebnisse auswerten</strong><br>
+
+      Die Versuchsdaten erhebt ihr gemeinsam.
+      <strong>Das Diagramm erstellt jeder selbstständig.</strong>
+
+    </div>
+
+  </div>
+
+
+  <!-- SCHRITT 5 -->
+
+  <div class="step">
+
+    <div class="number">5</div>
+
+    <div>
+
+      <strong>Projektmappe fertigstellen</strong><br>
+
+      Einige Aufgaben bearbeitet ihr gemeinsam, andere jeder für sich.
+      Achtet deshalb auf die Hinweise in der Projektmappe.
+
+    </div>
+
+  </div>
+
+
+</div>
+
+</details>
+
+
+
+<!-- =========================
+     ZEITPLAN
+     ========================= -->
+
+<details>
+
+<summary>🗓️ Zeitplan</summary>
+
+<div class="content">
+
+
+  <div class="lesson">
+
+    <div class="lesson-number">
+      1. Stunde
+    </div>
+
+    <div>
+
+      <strong>Projektstart</strong><br>
+
+      Projekt kennenlernen · Gruppen bilden · Thema erhalten ·
+      Projektmappe und Bewertungskriterien besprechen
+
+    </div>
+
+  </div>
+
+
+
+  <div class="lesson">
+
+    <div class="lesson-number">
+      2. Stunde
+    </div>
+
+    <div>
+
+      <strong>Versuch starten</strong><br>
+
+      Versuch ansetzen und Beobachtungen dokumentieren
+
+    </div>
+
+  </div>
+
+
+
+  <div class="lesson">
+
+    <div class="lesson-number">
+      3. Stunde
+    </div>
+
+    <div>
+
+      <strong>Beobachten &amp; auswerten</strong><br>
+
+      Versuch fortführen · Daten erfassen ·
+      Diagramm-Training bearbeiten · Auswertung beginnen
+
+    </div>
+
+  </div>
+
+
+
+  <div class="lesson">
+
+    <div class="lesson-number">
+      4. Stunde
+    </div>
+
+    <div>
+
+      <strong>Ergebnisse sichern</strong><br>
+
+      Versuch auswerten · eigenes Diagramm erstellen ·
+      Projektmappe fertigstellen
+
+      <br>
+
+      <span class="abgabe">
+        ✓ Abgabe der Projektmappe
+      </span>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+</details>
+
+
+
+<!-- =========================
+     BEWERTUNG
+     ========================= -->
+
+<details>
+
+<summary>⭐ Bewertung</summary>
+
+<div class="content">
+
+  <p>
+    Deine <strong>Projektmappe wird als praktische Leistung
     im Fach Biologie bewertet.</strong>
   </p>
 
+  <p>
+    Bei der Bewertung wird unter anderem darauf geachtet,
+    wie sorgfältig und fachlich richtig du gearbeitet hast.
+  </p>
+
+
   <div class="criteria">
 
-    <span class="badge">🔎 naturwissenschaftliches Arbeiten</span>
-    <span class="badge">📝 Ergebnisdokumentation</span>
-    <span class="badge">📊 Diagramm</span>
-    <span class="badge">💡 Interpretation</span>
-    <span class="badge">✓ sorgfältiges Arbeiten</span>
+    <span class="badge">
+      🔎 naturwissenschaftliches Arbeiten
+    </span>
+
+    <span class="badge">
+      📝 Ergebnisdokumentation
+    </span>
+
+    <span class="badge">
+      📊 Diagramm
+    </span>
+
+    <span class="badge">
+      💡 Interpretation
+    </span>
+
+    <span class="badge">
+      ✓ sorgfältiges Arbeiten
+    </span>
 
   </div>
+
 
   <p>
     Die genauen Anforderungen und die Punkteverteilung findest du
@@ -485,38 +844,48 @@ details[open] summary::after {
 
 </div>
 
-  </details>
+</details>
 
 
-  <!-- KRANKHEIT -->
 
-  <details>
+<!-- =========================
+     KRANKHEIT
+     ========================= -->
 
-    <summary>🤒 Was passiert, wenn jemand fehlt?</summary>
+<details>
 
-    <div class="content">
+<summary>🤒 Was passiert, wenn jemand fehlt?</summary>
 
-      <div class="notice">
+<div class="content">
 
-        <strong>Dein Partner fehlt?</strong><br>
-        Du arbeitest an diesem Tag selbstständig weiter.
+  <div class="notice">
 
-        <br><br>
+    <strong>Dein Partner fehlt?</strong><br>
 
-        <strong>Du warst krank?</strong><br>
-        Melde dich am ersten Tag nach deiner Rückkehr bei Frau Henn
-        und kläre, welche Arbeiten du nachholen musst.
+    Du arbeitest an diesem Tag selbstständig weiter.
 
-        <br><br>
 
-        Ist die Projektmappe bereits fällig, gibst du sie am
-        <strong>ersten Anwesenheitstag nach deiner Genesung</strong> ab.
+    <br><br>
 
-      </div>
 
-    </div>
+    <strong>Du warst krank?</strong><br>
 
-  </details>
+    Melde dich am ersten Tag nach deiner Rückkehr bei Frau Henn
+    und kläre, welche Arbeiten du nachholen musst.
+
+
+    <br><br>
+
+
+    Ist die Projektmappe bereits fällig, gibst du sie am
+    <strong>ersten Anwesenheitstag nach deiner Genesung</strong> ab.
+
+  </div>
+
+</div>
+
+</details>
+
 
 </div>
 
