@@ -8,10 +8,6 @@
 
 <style>
 
-/* =========================
-   GRUNDEINSTELLUNGEN
-   ========================= */
-
 * {
   box-sizing: border-box;
 }
@@ -30,10 +26,7 @@ body {
   padding: 22px;
 }
 
-
-/* =========================
-   KOPFBEREICH
-   ========================= */
+/* KOPFBEREICH */
 
 .hero {
   background: linear-gradient(135deg, #426b4e, #71956d);
@@ -63,10 +56,7 @@ body {
   font-size: 18px;
 }
 
-
-/* =========================
-   PROJEKTAUFTRAG
-   ========================= */
+/* PROJEKTAUFTRAG */
 
 .mission {
   background: white;
@@ -81,10 +71,7 @@ body {
   color: #426b4e;
 }
 
-
-/* =========================
-   SCHNELLÜBERSICHT
-   ========================= */
+/* SCHNELLÜBERSICHT */
 
 .quickinfo {
   display: grid;
@@ -116,10 +103,84 @@ body {
   font-size: 14px;
 }
 
+/* VORBEREITUNG */
 
-/* =========================
-   AUFKLAPPBEREICHE
-   ========================= */
+.preparation {
+  background: #eaf2e7;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.preparation h2 {
+  margin: 0 0 5px 0;
+  color: #355d42;
+  font-size: 22px;
+}
+
+.preparation-intro {
+  margin: 0 0 18px 0;
+}
+
+.prep-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.prep-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.prep-number {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e3eee2;
+  color: #426b4e;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.prep-card h3 {
+  margin: 0 0 8px 0;
+  color: #355d42;
+  font-size: 18px;
+}
+
+.prep-card p {
+  margin: 0 0 15px 0;
+}
+
+/* ROBUSTE BUTTONS FÜR MEBIS */
+
+.mebis-button {
+  display: inline-block !important;
+  background-color: #426b4e !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+  padding: 12px 18px !important;
+  border-radius: 10px !important;
+  border: 2px solid #426b4e !important;
+  cursor: pointer !important;
+}
+
+.mebis-button:hover {
+  background-color: #355d42 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* AUFKLAPPBEREICHE */
 
 details {
   background: white;
@@ -161,10 +222,7 @@ details[open] summary::after {
   padding: 0 25px 25px;
 }
 
-
-/* =========================
-   ARBEITSSCHRITTE
-   ========================= */
+/* ARBEITSSCHRITTE */
 
 .step {
   display: flex;
@@ -174,7 +232,7 @@ details[open] summary::after {
 }
 
 .number {
-  min-width: 36px;
+  flex: 0 0 36px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -190,44 +248,7 @@ details[open] summary::after {
   color: #355d42;
 }
 
-
-/* =========================
-   SELBSTLERNKURS
-   ========================= */
-
-.course-box {
-  background: #f0f6ee;
-  border: 1px solid #d7e5d4;
-  border-radius: 12px;
-  padding: 16px 18px;
-  margin-top: 12px;
-}
-
-.course-box p {
-  margin-top: 0;
-}
-
-.course-button {
-  display: inline-block;
-  background: #426b4e;
-  color: white !important;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 11px 17px;
-  border-radius: 10px;
-  margin-top: 4px;
-  transition: 0.2s;
-}
-
-.course-button:hover {
-  background: #355d42;
-  transform: translateY(-1px);
-}
-
-
-/* =========================
-   ZEITPLAN
-   ========================= */
+/* ZEITPLAN */
 
 .lesson {
   display: grid;
@@ -256,10 +277,7 @@ details[open] summary::after {
   margin-top: 7px;
 }
 
-
-/* =========================
-   BEWERTUNG
-   ========================= */
+/* BEWERTUNG */
 
 .criteria {
   display: flex;
@@ -275,10 +293,15 @@ details[open] summary::after {
   font-size: 14px;
 }
 
+.rating-box {
+  background: #f0f6ee;
+  border: 1px solid #d7e5d4;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 20px;
+}
 
-/* =========================
-   KRANKHEIT
-   ========================= */
+/* KRANKHEIT */
 
 .notice {
   background: #fff8e8;
@@ -288,10 +311,7 @@ details[open] summary::after {
   margin-top: 12px;
 }
 
-
-/* =========================
-   IPAD / TABLET
-   ========================= */
+/* IPAD */
 
 @media (max-width: 800px) {
 
@@ -301,6 +321,10 @@ details[open] summary::after {
 
   .quickinfo {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prep-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero {
@@ -317,10 +341,7 @@ details[open] summary::after {
   }
 }
 
-
-/* =========================
-   SMARTPHONE
-   ========================= */
+/* SMARTPHONE */
 
 @media (max-width: 480px) {
 
@@ -340,20 +361,21 @@ details[open] summary::after {
     padding: 18px;
   }
 
+  .mebis-button {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
 }
 
 </style>
 </head>
 
-
 <body>
 
 <div class="wrapper">
 
-
-<!-- =========================
-     KOPFBEREICH
-     ========================= -->
+<!-- KOPFBEREICH -->
 
 <div class="hero">
 
@@ -370,10 +392,7 @@ details[open] summary::after {
 </div>
 
 
-
-<!-- =========================
-     PROJEKTAUFTRAG
-     ========================= -->
+<!-- PROJEKTAUFTRAG -->
 
 <div class="mission">
 
@@ -386,70 +405,107 @@ details[open] summary::after {
 </div>
 
 
-
-<!-- =========================
-     SCHNELLÜBERSICHT
-     ========================= -->
+<!-- SCHNELLÜBERSICHT -->
 
 <div class="quickinfo">
 
   <div class="info">
-
     <div class="icon">👥</div>
-
-    <div class="info-title">
-      Arbeitsform
-    </div>
-
+    <div class="info-title">Arbeitsform</div>
     <div class="info-text">
       Zweiergruppe<br>
       <small>in Ausnahmefällen zu dritt</small>
     </div>
-
   </div>
 
-
   <div class="info">
-
     <div class="icon">⏱️</div>
-
-    <div class="info-title">
-      Projektzeit
-    </div>
-
+    <div class="info-title">Projektzeit</div>
     <div class="info-text">
       4 Biologiestunden
     </div>
-
   </div>
 
-
   <div class="info">
-
     <div class="icon">📁</div>
-
-    <div class="info-title">
-      Dein Produkt
-    </div>
-
+    <div class="info-title">Dein Produkt</div>
     <div class="info-text">
       Projektmappe
     </div>
-
   </div>
 
-
   <div class="info">
-
     <div class="icon">⭐</div>
-
-    <div class="info-title">
-      Bewertung
-    </div>
-
+    <div class="info-title">Bewertung</div>
     <div class="info-text">
       praktische Leistung<br>
       <small>im Fach Biologie</small>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- VORBEREITUNG -->
+
+<div class="preparation">
+
+  <h2>Bevor es losgeht</h2>
+
+  <p class="preparation-intro">
+    Bereite dich auf das Projekt vor. Erledige dazu die folgenden
+    beiden Schritte.
+  </p>
+
+  <div class="prep-grid">
+
+    <!-- SELBSTLERNKURS -->
+
+    <div class="prep-card">
+
+      <div class="prep-number">1</div>
+
+      <h3>📊 Diagramm-Training</h3>
+
+      <p>
+        Bearbeite zuerst den Selbstlernkurs. Dort wiederholst du,
+        wie ein gutes naturwissenschaftliches Diagramm aufgebaut wird.
+        Dieses Wissen brauchst du später für deine eigene Auswertung.
+      </p>
+
+      <a
+        href="https://lernplattform.bycs.de/course/view.php?id=2543095&amp;section=0#tabs-tree-start"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mebis-button">
+        📊 Selbstlernkurs starten
+      </a>
+
+    </div>
+
+
+    <!-- BEWERTUNGSBOGEN -->
+
+    <div class="prep-card">
+
+      <div class="prep-number">2</div>
+
+      <h3>📋 Bewertungsbogen</h3>
+
+      <p>
+        Schau dir anschließend den Bewertungsbogen an.
+        So weißt du von Anfang an, worauf du bei deiner
+        Projektmappe besonders achten musst.
+      </p>
+
+      <a
+        href="https://lernplattform.bycs.de/pluginfile.php/135429358/mod_resource/content/0/Bewertungsbogen.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mebis-button">
+        📋 Bewertungsbogen öffnen
+      </a>
+
     </div>
 
   </div>
@@ -457,10 +513,7 @@ details[open] summary::after {
 </div>
 
 
-
-<!-- =========================
-     SO ARBEITET IHR
-     ========================= -->
+<!-- SO ARBEITET IHR -->
 
 <details open>
 
@@ -468,128 +521,57 @@ details[open] summary::after {
 
 <div class="content">
 
-
-  <!-- SCHRITT 1: SELBSTLERNKURS -->
-
   <div class="step">
-
     <div class="number">1</div>
-
     <div>
-
-      <strong>Diagramm-Training absolvieren</strong><br>
-
-      Bevor das Keimungsprojekt startet, bearbeitest du den
-      Selbstlernkurs zum Erstellen von Diagrammen.
-
-      <div class="course-box">
-
-        <p>
-          <strong>📊 Fit fürs Diagramm?</strong><br>
-          Im Selbstlernkurs wiederholst du, wie ein gutes
-          naturwissenschaftliches Diagramm aufgebaut wird.
-          Dieses Wissen brauchst du später für die Auswertung
-          deines Keimungsversuchs.
-        </p>
-
-        <a
-          href="https://lernplattform.bycs.de/course/view.php?id=2543095&amp;section=0#tabs-tree-start"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="course-button">
-
-          📊 Selbstlernkurs „Diagramme“ starten
-
-        </a>
-
-      </div>
-
+      <strong>Vorbereiten</strong><br>
+      Bearbeite den Selbstlernkurs zum Thema Diagramme und
+      schau dir den Bewertungsbogen an.
     </div>
-
   </div>
 
-
-  <!-- SCHRITT 2 -->
-
   <div class="step">
-
     <div class="number">2</div>
-
     <div>
-
       <strong>Hypothese erhalten</strong><br>
-
       Jede Gruppe erhält eine Hypothese, die sie mit einem
       Keimungsversuch überprüfen soll.
-
     </div>
-
   </div>
 
-
-  <!-- SCHRITT 3 -->
-
   <div class="step">
-
     <div class="number">3</div>
-
     <div>
-
       <strong>Versuch durchführen</strong><br>
-
       Der Versuch ist vorgegeben. Ihr führt ihn sorgfältig durch,
       beobachtet genau und erhebt gemeinsam eure Daten.
-
     </div>
-
   </div>
 
-
-  <!-- SCHRITT 4 -->
-
   <div class="step">
-
     <div class="number">4</div>
-
     <div>
-
       <strong>Ergebnisse auswerten</strong><br>
-
       Die Versuchsdaten erhebt ihr gemeinsam.
       <strong>Das Diagramm erstellt jeder selbstständig.</strong>
-
     </div>
-
   </div>
-
-
-  <!-- SCHRITT 5 -->
 
   <div class="step">
-
     <div class="number">5</div>
-
     <div>
-
       <strong>Projektmappe fertigstellen</strong><br>
-
       Einige Aufgaben bearbeitet ihr gemeinsam, andere jeder für sich.
       Achtet deshalb auf die Hinweise in der Projektmappe.
-
     </div>
-
   </div>
-
 
 </div>
 
 </details>
 
 
-
-<!-- =========================
-     ZEITPLAN
-     ========================= -->
+<!-- ZEITPLAN -->
 
 <details>
 
@@ -597,73 +579,35 @@ details[open] summary::after {
 
 <div class="content">
 
-
   <div class="lesson">
-
-    <div class="lesson-number">
-      1. Stunde
-    </div>
-
+    <div class="lesson-number">1. Stunde</div>
     <div>
-
       <strong>Projektstart</strong><br>
-
       Projekt kennenlernen · Gruppen bilden · Thema erhalten ·
       Projektmappe und Bewertungskriterien besprechen
-
     </div>
-
   </div>
 
-
-
   <div class="lesson">
-
-    <div class="lesson-number">
-      2. Stunde
-    </div>
-
+    <div class="lesson-number">2. Stunde</div>
     <div>
-
       <strong>Versuch starten</strong><br>
-
       Versuch ansetzen und Beobachtungen dokumentieren
-
     </div>
-
   </div>
 
-
-
   <div class="lesson">
-
-    <div class="lesson-number">
-      3. Stunde
-    </div>
-
+    <div class="lesson-number">3. Stunde</div>
     <div>
-
       <strong>Beobachten &amp; auswerten</strong><br>
-
-      Versuch fortführen · Daten erfassen ·
-      Diagramm-Training bearbeiten · Auswertung beginnen
-
+      Versuch fortführen · Daten erfassen · Auswertung beginnen
     </div>
-
   </div>
 
-
-
   <div class="lesson">
-
-    <div class="lesson-number">
-      4. Stunde
-    </div>
-
+    <div class="lesson-number">4. Stunde</div>
     <div>
-
       <strong>Ergebnisse sichern</strong><br>
-
       Versuch auswerten · eigenes Diagramm erstellen ·
       Projektmappe fertigstellen
 
@@ -672,21 +616,15 @@ details[open] summary::after {
       <span class="abgabe">
         ✓ Abgabe der Projektmappe
       </span>
-
     </div>
-
   </div>
-
 
 </div>
 
 </details>
 
 
-
-<!-- =========================
-     BEWERTUNG
-     ========================= -->
+<!-- BEWERTUNG -->
 
 <details>
 
@@ -706,45 +644,29 @@ details[open] summary::after {
 
   <div class="criteria">
 
-    <span class="badge">
-      🔎 naturwissenschaftliches Arbeiten
-    </span>
-
-    <span class="badge">
-      📝 Ergebnisdokumentation
-    </span>
-
-    <span class="badge">
-      📊 Diagramm
-    </span>
-
-    <span class="badge">
-      💡 Interpretation
-    </span>
-
-    <span class="badge">
-      ✓ sorgfältiges Arbeiten
-    </span>
+    <span class="badge">🔎 naturwissenschaftliches Arbeiten</span>
+    <span class="badge">📝 Ergebnisdokumentation</span>
+    <span class="badge">📊 Diagramm</span>
+    <span class="badge">💡 Interpretation</span>
+    <span class="badge">✓ sorgfältiges Arbeiten</span>
 
   </div>
 
-  <div class="course-box">
+  <div class="rating-box">
+
+    <strong>📋 Noch einmal nachschauen?</strong>
 
     <p>
-      <strong>📋 Wie wird meine Projektmappe bewertet?</strong><br>
       Im Bewertungsbogen findest du alle Kriterien und die
-      genaue Punkteverteilung. Schau ihn dir am besten
-      <strong>vor Beginn deiner Arbeit</strong> genau an.
+      genaue Punkteverteilung.
     </p>
 
     <a
       href="https://lernplattform.bycs.de/pluginfile.php/135429358/mod_resource/content/0/Bewertungsbogen.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      class="course-button">
-
+      class="mebis-button">
       📋 Bewertungsbogen öffnen
-
     </a>
 
   </div>
@@ -754,10 +676,7 @@ details[open] summary::after {
 </details>
 
 
-
-<!-- =========================
-     KRANKHEIT
-     ========================= -->
+<!-- KRANKHEIT -->
 
 <details>
 
@@ -768,21 +687,15 @@ details[open] summary::after {
   <div class="notice">
 
     <strong>Dein Partner fehlt?</strong><br>
-
     Du arbeitest an diesem Tag selbstständig weiter.
-
 
     <br><br>
 
-
     <strong>Du warst krank?</strong><br>
-
     Melde dich am ersten Tag nach deiner Rückkehr bei Frau Henn
     und kläre, welche Arbeiten du nachholen musst.
 
-
     <br><br>
-
 
     Ist die Projektmappe bereits fällig, gibst du sie am
     <strong>ersten Anwesenheitstag nach deiner Genesung</strong> ab.
@@ -792,7 +705,6 @@ details[open] summary::after {
 </div>
 
 </details>
-
 
 </div>
 
